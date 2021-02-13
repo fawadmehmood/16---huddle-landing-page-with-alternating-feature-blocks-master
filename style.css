@@ -1,0 +1,104 @@
+:root{
+--Pink: hsl(322, 100%, 66%);
+--Very-Pale-Cyan: hsl(193, 100%, 96%);
+--Very-Dark-Cyan: hsl(192, 100%, 9%);
+--Grayish-Blue: hsl(208, 11%, 55%);
+
+--font-400: 400;
+--font-600: 600;
+--font-700: 700;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.8rem;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
+.hero__wrapper{
+    background: url('images/bg-hero-desktop.svg') var(--Very-Pale-Cyan);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4rem 5rem;
+}
+
+.hero__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+    /* padding: 4rem 0;    */
+}
+
+
+.hero__header_img{
+    width: 16rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.btn{
+    border-radius: 10rem;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    box-shadow: 0.4rem 0.4rem 1rem 0rem rgba(0,0,0,0.35);
+}
+
+.hero__header_btn{
+    background-color: white;
+    width: 15rem;
+    padding: 1rem;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+}
+
+.hero__text{
+    width: 45%;
+    padding-right: 4rem;
+}
+
+.heading{
+    font-family: 'Poppins', sans-serif;
+    font-weight: var(--font-600);
+    font-size: 4rem;
+}
+
+.hero__desc{
+    margin: 3rem 0;
+}
+
+.hero__button{
+    background-color: var(--Pink);
+    color: white;
+    width: 25rem; 
+    padding: 1.5rem;
+}
+
+.hero__image__wrapper{
+    width: 55%;
+}
+
+.hero__img{
+    width: 100%;
+    object-fit: cover;
+}
