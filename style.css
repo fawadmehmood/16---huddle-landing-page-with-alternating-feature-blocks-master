@@ -30,11 +30,14 @@ body{
     margin: 0 auto;
 }
 
+
+/* start of hero and header */
+
 .hero__wrapper{
     background: url('images/bg-hero-desktop.svg') var(--Very-Pale-Cyan);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 4rem 5rem;
+    padding: 4rem 10rem;
 }
 
 .hero__header{
@@ -59,12 +62,17 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 1.4rem;
     box-shadow: 0.4rem 0.4rem 1rem 0rem rgba(0,0,0,0.35);
+    transition: background-color 0.3s ease-in-out;
 }
 
 .hero__header_btn{
     background-color: white;
     width: 15rem;
     padding: 1rem;
+}
+
+.hero__header_btn:hover{
+    background-color: #f7f7f7;
 }
 
 .hero{
@@ -80,18 +88,23 @@ body{
 .heading{
     font-family: 'Poppins', sans-serif;
     font-weight: var(--font-600);
-    font-size: 4rem;
+    font-size: clamp(2rem, 3vw, 5rem);
 }
 
 .hero__desc{
     margin: 3rem 0;
+    font-size: clamp(1.4rem, 1.5vw, 1.8rem);
 }
 
-.hero__button{
+.cta__button{
     background-color: var(--Pink);
     color: white;
     width: 25rem; 
     padding: 1.5rem;
+}
+
+.cta__button:hover{
+    background-color: rgba(255, 82, 191, 0.808);
 }
 
 .hero__image__wrapper{
@@ -101,4 +114,76 @@ body{
 .hero__img{
     width: 100%;
     object-fit: cover;
+}
+
+/* end of hero and header */
+
+
+/* start of card container */
+.cards__container{
+    padding: 15rem 10rem 4rem;
+}
+
+.card:not(:last-child){
+    margin-bottom: 3rem;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    padding: 3rem 4rem 4rem 10%;
+}
+
+.card__style{
+    border-radius: 1.4rem;
+    box-shadow: 0rem 0rem 0.8rem 0rem rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+.card__image img{
+    max-width: 70%;
+    display: block;
+    margin-left: auto;
+}
+
+.card__text{
+    width: 50%;
+}
+
+.card__image{
+    width: 50%;
+}
+
+.order{
+    order: 2;
+}
+
+.order__img__m img{
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.card__text__heading{
+    font-size: clamp(2rem, 2vw, 4rem);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.card__text_desc{
+      color: var(--Grayish-Blue);
+      font-size: clamp(1.2rem, 1.3vw, 1.6rem);
+}
+
+.community__card{
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      padding: 6rem;
+      /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);; */
+}
+
+.community__card__heading{
+    margin-bottom: 3rem;
 }
