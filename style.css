@@ -21,7 +21,6 @@ html{
 
 body{
     font-size: 1.8rem;
-    /* font-family: 'Poppins', sans-serif; */
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -49,7 +48,7 @@ body{
 
 
 .hero__header_img{
-    width: 16rem;
+    max-width: 16rem;
     height: auto;
     object-fit: cover;
 }
@@ -66,7 +65,7 @@ body{
 
 .hero__header_btn{
     background-color: white;
-    width: 15rem;
+    width: 13rem;
     padding: 1rem;
 }
 
@@ -98,7 +97,8 @@ body{
 .cta__button{
     background-color: var(--Pink);
     color: white;
-    width: 25rem; 
+    max-width: 25rem; 
+    width: 100%;
     padding: 1.5rem;
 }
 
@@ -120,7 +120,7 @@ body{
 
 /* start of card container */
 .cards__container{
-    padding: 15rem 10rem 4rem;
+    padding: 15rem 10rem 0rem;
 }
 
 .card:not(:last-child){
@@ -142,7 +142,7 @@ body{
 .card__image img{
     max-width: 70%;
     display: block;
-    margin-left: auto;
+    /* margin-left: auto; */
 }
 
 .card__text{
@@ -153,13 +153,12 @@ body{
     width: 50%;
 }
 
-.order{
+.order__img__m{
     order: 2;
 }
 
 .order__img__m img{
-    margin-left: 0;
-    margin-right: auto;
+    margin-left: auto;
 }
 
 .card__text__heading{
@@ -180,10 +179,13 @@ body{
       align-items: center;
       margin: 0 auto;
       padding: 6rem;
+      position: relative;
+      bottom: -10rem;
 }
 
 .community__card__heading{
     margin-bottom: 3rem;
+    text-align: center;
 }
 
 /* end of card container */
@@ -196,7 +198,7 @@ body{
     background-color: var(--Very-Dark-Cyan);
     padding: 15rem 10rem 6rem;
     color: white;
-    font-size: clamp(1rem, 1.1vw, 1.4rem);
+    font-size: clamp(1.2rem, 1.1vw, 1.4rem);
     font-weight: var(--font-400);
 }
 
@@ -210,7 +212,7 @@ body{
 
 .footer__info__wrapper{
     width: 45%;
-    margin-right: 3rem;
+    margin-right: 4rem;
 }
 
 .footer__info{
@@ -282,4 +284,124 @@ body{
 
 .footer__copyright{
     text-align: end;
+}
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1140px) {
+   
+    .footer__nav__list{
+            height: 12rem;
+    } 
+}
+
+@media screen and (max-width: 1000px) {
+    .community__card{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+   .hero{
+       flex-direction: column;
+   }
+
+   .hero__text, .hero__image__wrapper{
+       width: 100%;
+       padding: 0;
+       text-align: center;
+   }
+
+   .hero__image__wrapper{
+       margin-top: 6rem;
+   }
+
+   .card{
+       flex-direction: column;
+   }
+
+   .card__image, .card__text{
+       width: 100%;
+   }
+   .order__img__m{
+       order: 0;
+   }
+
+   .card__image img{
+       max-width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          /* margin: auto; */
+   }
+
+   .card__text{
+       text-align: center;
+       margin-top: 5rem;
+   }
+
+   .community__card{
+       width: 90%;
+   }
+
+   .hero__wrapper, .cards__container, .footer{
+       padding-left: 6rem;
+       padding-right: 6rem;
+   }
+
+.footer__content{
+    flex-direction: column;
+}
+
+.footer__info__wrapper, .footer__nav{
+    width: 100%;
+}
+
+.footer__nav{
+    margin-top: 5rem;
+}
+
+.footer__nav__list{
+    flex-wrap: nowrap;
+    height: auto;
+}
+
+.footer__copyright{
+    text-align: center;
+}
+
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    .hero__wrapper, .cards__container, .footer{
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .hero__header_img{
+        width: 70%;
+    }
+
+    .cta__button{
+        min-width: 18rem;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    .hero__header_btn{
+            font-size: 1rem;
+            width: 10rem;
+            /* min-width: 10rem; */
+    }
+
+    .hero__header_img{
+        width: 60%;
+    }
+
+
 }
